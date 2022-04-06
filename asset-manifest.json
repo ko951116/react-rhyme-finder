@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.d3a11f72.js",
-    "static/js/787.746b7ad1.chunk.js": "/static/js/787.746b7ad1.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.d3a11f72.js.map": "/static/js/main.d3a11f72.js.map",
-    "787.746b7ad1.chunk.js.map": "/static/js/787.746b7ad1.chunk.js.map"
+    "main.css": "/react-rhyme-finder/static/css/main.073c9b0a.css",
+    "main.js": "/react-rhyme-finder/static/js/main.c041da54.js",
+    "static/js/787.746b7ad1.chunk.js": "/react-rhyme-finder/static/js/787.746b7ad1.chunk.js",
+    "static/media/logo.svg": "/react-rhyme-finder/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/react-rhyme-finder/index.html",
+    "main.073c9b0a.css.map": "/react-rhyme-finder/static/css/main.073c9b0a.css.map",
+    "main.c041da54.js.map": "/react-rhyme-finder/static/js/main.c041da54.js.map",
+    "787.746b7ad1.chunk.js.map": "/react-rhyme-finder/static/js/787.746b7ad1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.d3a11f72.js"
+    "static/js/main.c041da54.js"
   ]
 }
