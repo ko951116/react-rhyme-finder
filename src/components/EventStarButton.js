@@ -12,10 +12,6 @@ const EventStarButton = (props) => {
         setStarredEvents((previousList) => {
             return [ ...previousList, title];
         });
-
-        // props.handMeDownSetStarStateFunction((previousValue) => {
-        //     return !previousValue;
-        // });
     };
 
     return (

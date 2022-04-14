@@ -43,22 +43,11 @@ const EventsListing = (props) => {
         const groupby = groupBy(props.events, 'numSyllables')
         const length = Object.keys(groupby).length;
 
-        // for (let m = 0 ; m<length; m++) {
-        //     console.log('Syllable: ', Object.keys(groupby)[m])
-        //     // console.log(Object.keys(groupBy(props.events, 'numSyllables')))
-        //     for (let item in groupby[Object.keys(groupby)[m]]) {
-        //         console.log(groupby[Object.keys(groupby)[m]][item])
-        //     }
-        // }
 
         const eventsToShow = [];
 
 
         for (let n=0; n<length; n++) {
-            // for (let item in groupby[Object.keys(groupby)[n]]) {
-            //     console.log(groupby[Object.keys(groupby)[n]][item])
-            // }
-            // props.events.forEach((eventInstance, index) =>
             eventsToShow.push(<h3>Syllable: {Object.keys(groupby)[n]}</h3>)
 
                 groupby[Object.keys(groupby)[n]].forEach((eventInstance, index) =>
@@ -77,50 +66,13 @@ const EventsListing = (props) => {
             )
         }
 
-        // for (let n=0; n<length; n++) {
-        //     // for (let item in groupby[Object.keys(groupby)[n]]) {
-        //     //     console.log(groupby[Object.keys(groupby)[n]][item])
-        //     // }
-        //     // props.events.forEach((eventInstance, index) =>
-        //     groupby[Object.keys(groupby)[n]].forEach((eventInstance, index) =>
-        //
-        //
-        //         eventsToShow.push(
-        //             <EventInstance
-        //                 setStarredEvents = {setStarredEvents} //will be passing down to EventInstance
-        //                 key={eventInstance.word}
-        //                 title={eventInstance.word}
-        //             >
-        //                 <EventInfo
-        //                     title={eventInstance.word}
-        //                     // description={eventInstance.description}
-        //                 />
-        //             </EventInstance>
-        //         )
-        //     )
-        // }
-
-        // Loop through the event list. Add each event as new array item.
-        // If React sees an array of JSX "markup", it will render each one.
-        // props.events.forEach((eventInstance, index) =>
-        //     eventsToShow.push(
-        //         <EventInstance
-        //             setStarredEvents = {setStarredEvents} //will be passing down to EventInstance
-        //             key={index}
-        //             title={eventInstance.word}
-        //         >
-        //             <EventInfo
-        //                 title={eventInstance.word}
-        //                 // description={eventInstance.description}
-        //             />
-        //         </EventInstance>
-        //     )
-        // );
-
-        // for (let i=0; i<length; i++) {
-        //     return eventsToShow[i]
-        // }
-        return eventsToShow;
+        console.log(eventsToShow.length)
+        if (eventsToShow.length>0) {
+            return eventsToShow
+        } else {
+            return <p>(no results)</p>
+        }
+        // return eventsToShow;
     }
 
 
@@ -132,39 +84,11 @@ const EventsListing = (props) => {
 
 
 
-    //API 다운로딩할때 로딩화면
-
-    // for (let count=1; count<Object.keys(groupBy(props.events, 'numSyllables')).length; count++) {
-    //     return (
-    //         <>
-    //             <h2>Syllables: {j}</h2>
-    //             {generateEvents()}
-    //         </>
-    //     )
-    // }
-
-
 
         return (
             <>
-                {/*<StarredEvents starredList={starredEvents} />*/}
-
                 <div className='events'>
-                    {/*<h2>Syllables:  </h2>*/}
                     {generateEvents()}
-                    {/*    {props.events.map((eventInstance, index) => (*/}
-                    {/*        <li>*/}
-                    {/*            {eventInstance.word}*/}
-                    {/*            <button*/}
-                    {/*                className="btn btn-sm btn-outline-success done"*/}
-                    {/*                type="button"*/}
-                    {/*                // onClick={remove}*/}
-                    {/*            >*/}
-                    {/*                (save)*/}
-                    {/*            </button>*/}
-                    {/*        </li>*/}
-                    {/*        )*/}
-                    {/*    )}*/}
                 </div>
             </>
         );

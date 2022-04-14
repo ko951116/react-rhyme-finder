@@ -52,11 +52,6 @@ function App() {
             .then((json) => setUmichEvents(Object.values(json)));
     }
 
-    //
-    // console.log(umichEvents)
-    // const length = Object.keys(groupBy(umichEvents, 'numSyllables')).length;
-    // const groupby = groupBy(umichEvents, 'numSyllables')
-    // const length = Object.keys(groupby).length;
 
     function showSynonymsBtn() {
         setIsShowRhymingWordsBt(false)
@@ -78,17 +73,12 @@ function App() {
       <main className="container">
         <h1 className="row">React Rhyme Finder (579 Problem Set 6)</h1>
 
-          {/*<div className="row">*/}
-          {/*    <div className="col">Saved words: <span></span></div>*/}
-          {/*</div>*/}
 
           <StarredEvents starredList={starredEvents} setStarredEvents={setStarredEvents} />
 
           <div className="input-group">
               <input
                   ref = {inputRef}
-                  // value={taskDescription}
-                  // onChange={(e) => setTaskDescription(e.target.value)}
                   className="form-control w-25"
                   type="text"
                   placeholder="Enter a word"
@@ -110,21 +100,11 @@ function App() {
           </div>
 
           <span>{isShowRhymingWordsBtn ? `Words that rhyme with ` + inputRef.current.value + `: ` : ''}</span>
-          {/*<span>{umichEvents ? '' : '(no results)'}</span>*/}
           <span>{isShowSynonymsBtn ? `Words with a similar meaning to `+ inputRef.current.value + `: ` : ''}</span>
 
 
-          {/*<span>{syllables()}</span>*/}
         <div className="row">
-          {/*{umichEvents.map((item) =>*/}
-
               <EventsListing events={umichEvents} setStarredEvents={setStarredEvents}
-
-                  // task={item.task}
-                  // timestamp={item.timestamp}
-                  // created={item.created}
-                  // key={item.created}
-                  // remove={() => removeTodoItem(item.created)}
               />
           {/*)}*/}
         </div>
